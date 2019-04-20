@@ -1,4 +1,4 @@
-# Algorithm_related
+# Algorithm_Aapprentice
 This is a just personal repository for practicing algorithms. 
 
 - Codes are mostly written in Python.
