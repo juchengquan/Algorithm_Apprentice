@@ -1,0 +1,5 @@
+Each line is terminated with a special character, called the EOL or End of Line character. There are several types, but the most common is the comma {,} or newline character. It ends the current line and tells the interpreter a new one has begun. 
+
+A backslash character can also be used, and it tells the interpreter that the next character ¨C following the slash ¨C should be treated as a new line. This character is useful when you don¡¯t want to start a new line in the text itself but in the code. 
+
+A binary file is any type of file that is not a text file. Because of their nature, binary files can only be processed by an application that know or understand the file¡¯s structure. In other words, they must be applications that can read and interpret binary.
