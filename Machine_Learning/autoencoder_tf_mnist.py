@@ -60,7 +60,10 @@ history = model.fit(x_train, [y_train, x_train], epochs=15, shuffle=True, batch_
 #model.evaluate(x_test, y_test)
 
 ### Compare the decoded information
-_, x_decoded = model.predict(x_test)
+x_encoded, x_decoded = model.predict(x_test)
+
+x_encoded = np.argmax(x_encoded, axis=1)
+y_original = np.argmax(y_test, axis=1)
 
 fig1 = plt.figure(figsize=(12, 8), )
 for i in range(50):
