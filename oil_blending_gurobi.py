@@ -38,14 +38,33 @@ v_blends = mod.addVars(oil_names, gas_names, vtype="C", lb=0)
 v_adv = mod.addVars(gas_names, vtype="C", lb=0)
 
 ### Demand:
-mod.addConstrs( quicksum(v_blends[o,g] for o in oil_names) == df_gas.loc[g,"demand"] for g in gas_names)
-
+mod.addConstrs( quicksum(v_blends[o,g] for o in oil_names) == df_gas.loc[g,"demand"] + v_adv[g]*advert_return for g in gas_names)
 ### Maximum Capacity:
 mod.addConstrs( quicksum(v_blends[o,g] for g in gas_names) <= df_oil.loc[o,"capacity"] for o in oil_names )
+### Octane levels:
+mod.addConstrs( quicksum(v_blends[o,g]*(df_oil.loc[o,"octane"] - df_gas.loc[g, "octane"]) for o in oil_names) >= 0 for g in gas_names )
+### Lead:
+mod.addConstrs(  quicksum(v_blends[o,g]*(df_oil.loc[o,"lead"] - df_gas.loc[g,"lead"]) for o in oil_names) <=0 for g in gas_names )
+### Maximum production
+mod.addConstr( quicksum(v_blends) <= production_max)
 
-### Octane and Lead levels
-mod.addConstrs(  )
-
+total_revenue = quicksum(v_blends[o,g] * df_gas.loc[g, "price"] for g in gas_names for o in oil_names)
+total_production = production_cost * quicksum(v_blends)
+total_oil_cost = quicksum( v_blends[o,g] * df_oil.loc[o, "price"] for g in gas_names for o in oil_names )
+total_adv_cost = quicksum( v_adv )
 
 mod.update()
 mod.printStats()
+
+mod.setObjective(total_revenue-total_production-total_oil_cost-total_adv_cost, sense=-1)
+
+mod.optimize()
+
+df_res_blend = pd.DataFrame({"var_value": v_blends})
+df_res_blend.index.names = ["oil", "gas"]
+df_res_blend = df_res_blend.var_value.apply(lambda x: x.X).unstack(level="oil")
+
+df_res_adv = pd.DataFrame({"var_value": v_adv})
+df_res_adv.index.names = ["gas"]
+df_res_adv = df_res_adv.var_value.apply(lambda x: x.X)
+
