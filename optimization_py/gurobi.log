@@ -1,0 +1,118 @@
+Optimize a model with 1629 rows, 1344 columns and 6656 nonzeros
+Variable types: 32 continuous, 1312 integer (1312 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+01]
+  Objective range  [1e+01, 4e+01]
+  Bounds range     [1e+00, 4e+01]
+  RHS range        [1e+00, 1e+01]
+Presolve removed 1039 rows and 422 columns
+Presolve time: 0.01s
+Presolved: 590 rows, 922 columns, 3732 nonzeros
+Variable types: 0 continuous, 922 integer (892 binary)
+
+Root relaxation: objective 2.882400e+04, 402 iterations, 0.01 seconds
+
+    Nodes    |    Current Node    |     Objective Bounds      |     Work
+ Expl Unexpl |  Obj  Depth IntInf | Incumbent    BestBd   Gap | It/Node Time
+
+     0     0 28824.0000    0    7          - 28824.0000      -     -    0s
+H    0     0                    29250.000000 28824.0000  1.46%     -    0s
+H    0     0                    29088.000000 28824.0000  0.91%     -    0s
+     0     0 28824.0000    0   27 29088.0000 28824.0000  0.91%     -    0s
+H    0     0                    28824.000000 28824.0000  0.00%     -    0s
+
+Cutting planes:
+  Gomory: 4
+  Cover: 2
+  MIR: 2
+  StrongCG: 4
+
+Explored 1 nodes (1546 simplex iterations) in 0.12 seconds
+Thread count was 4 (of 4 available processors)
+
+Solution count 3: 28824 29088 29250 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 2.882400000000e+04, best bound 2.882400000000e+04, gap 0.0000%
+
+Gurobi 8.1.1 (win64, Python) logging started 06/17/19 15:05:32
+
+Academic license - for non-commercial use only
+Warning: Gurobi version mismatch between Python 8.1.0 and C library 8.1.1
+Optimize a model with 0 rows, 2 columns and 0 nonzeros
+Model has 1 quadratic constraint
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  QMatrix range    [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [2e+00, 2e+00]
+  RHS range        [0e+00, 0e+00]
+  QRHS range       [1e+00, 1e+00]
+Presolve removed 0 rows and 2 columns
+Presolve time: 0.01s
+Presolve: All rows and columns removed
+
+Barrier solved model in 0 iterations and 0.01 seconds
+Optimal objective 0.00000000e+00
+Optimize a model with 0 rows, 2 columns and 0 nonzeros
+Model has 1 quadratic constraint
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  QMatrix range    [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [2e+00, 2e+00]
+  RHS range        [0e+00, 0e+00]
+  QRHS range       [1e+00, 1e+00]
+Presolve time: 0.01s
+Presolved: 5 rows, 3 columns, 5 nonzeros
+Presolved model has 1 second-order cone constraint
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.000e+01
+ Factor NZ  : 1.500e+01
+ Factor Ops : 5.500e+01 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   1.33333333e+00  1.33333333e+00  1.44e+00 1.17e+00  2.47e+00     0s
+   1   1.68057367e+00  3.71379662e+00  2.07e-01 1.29e-06  3.84e-01     0s
+   2   1.39848188e+00  1.54191428e+00  0.00e+00 1.41e-12  1.79e-02     0s
+   3   1.41415704e+00  1.41440698e+00  0.00e+00 2.45e-13  3.12e-05     0s
+   4   1.41421345e+00  1.41421389e+00  0.00e+00 1.33e-11  5.60e-08     0s
+
+Barrier solved model in 4 iterations and 0.02 seconds
+Optimal objective 1.41421345e+00
+
+Optimize a model with 0 rows, 2 columns and 0 nonzeros
+Model has 1 quadratic constraint
+Coefficient statistics:
+  Matrix range     [0e+00, 0e+00]
+  QMatrix range    [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [2e+00, 2e+00]
+  RHS range        [0e+00, 0e+00]
+  QRHS range       [1e+00, 1e+00]
+Presolve time: 0.01s
+Presolved: 5 rows, 3 columns, 5 nonzeros
+Presolved model has 1 second-order cone constraint
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.000e+01
+ Factor NZ  : 1.500e+01
+ Factor Ops : 5.500e+01 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   1.33333333e+00  1.33333333e+00  1.44e+00 1.17e+00  2.47e+00     0s
+   1   1.68057367e+00  3.71379662e+00  2.07e-01 1.29e-06  3.84e-01     0s
+   2   1.39848188e+00  1.54191428e+00  0.00e+00 1.41e-12  1.79e-02     0s
+   3   1.41415704e+00  1.41440698e+00  0.00e+00 2.45e-13  3.12e-05     0s
+   4   1.41421345e+00  1.41421389e+00  0.00e+00 1.33e-11  5.60e-08     0s
+
+Barrier solved model in 4 iterations and 0.02 seconds
+Optimal objective 1.41421345e+00
+
