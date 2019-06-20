@@ -116,3 +116,82 @@ Iter       Primal          Dual         Primal    Dual     Compl     Time
 Barrier solved model in 4 iterations and 0.02 seconds
 Optimal objective 1.41421345e+00
 
+
+Gurobi 8.1.1 (win64, Python) logging started 06/20/19 12:39:08
+
+Academic license - for non-commercial use only
+Warning: Gurobi version mismatch between Python 8.1.0 and C library 8.1.1
+Parameter OutputFlag unchanged
+   Value: 1  Min: 0  Max: 1  Default: 1
+Changed value of parameter QCPDual to 1
+   Prev: 0  Min: 0  Max: 1  Default: 0
+Optimize a model with 11 rows, 10 columns and 18 nonzeros
+Model has 2 quadratic constraints
+Coefficient statistics:
+  Matrix range     [1e+00, 2e+00]
+  QMatrix range    [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e+00, 1e+01]
+Presolve removed 8 rows and 4 columns
+Presolve time: 0.02s
+Presolved: 7 rows, 6 columns, 10 nonzeros
+Presolved model has 2 second-order cone constraints
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.200e+01
+ Factor NZ  : 2.800e+01
+ Factor Ops : 1.400e+02 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0  -6.66666667e+00 -6.66666667e+00  3.69e+01 4.16e-01  6.17e+00     0s
+   1  -6.16146435e+00 -8.91812994e+00  1.00e+01 4.57e-07  1.05e+00     0s
+   2  -1.59247698e+00 -1.71645363e+00  4.00e-01 2.51e-09  3.79e-02     0s
+   3  -1.42130875e+00 -1.42245521e+00  1.25e-02 1.81e-14  7.96e-04     0s
+   4  -1.41426783e+00 -1.41422327e+00  1.02e-04 2.95e-12  1.45e-06     0s
+   5  -1.41421362e+00 -1.41421367e+00  1.87e-07 5.18e-10  1.46e-08     0s
+
+Barrier solved model in 5 iterations and 0.03 seconds
+Optimal objective -1.41421362e+00
+
+Solving KKT system to obtain QCP duals...
+
+Optimize a model with 13 rows, 10 columns and 24 nonzeros
+Coefficient statistics:
+  Matrix range     [1e+00, 3e+00]
+  Objective range  [1e+00, 3e+00]
+  QObjective range [2e+00, 2e+00]
+  Bounds range     [0e+00, 0e+00]
+  RHS range        [1e-07, 1e+01]
+Presolve removed 4 rows and 0 columns
+Presolve time: 0.05s
+Presolved: 9 rows, 10 columns, 20 nonzeros
+Ordering time: 0.00s
+
+Barrier statistics:
+ AA' NZ     : 1.200e+01
+ Factor NZ  : 4.500e+01
+ Factor Ops : 2.850e+02 (less than 1 second per iteration)
+ Threads    : 1
+
+                  Objective                Residual
+Iter       Primal          Dual         Primal    Dual     Compl     Time
+   0   2.01992486e+06 -2.15014638e+06  2.01e+03 9.93e+02  1.00e+06     0s
+   1   2.66253601e+05 -3.49340908e+05  7.55e+02 2.50e+02  2.70e+05     0s
+   2   2.37763523e+02 -7.82296387e+04  1.99e+01 9.18e+00  1.52e+04     0s
+   3   2.88599562e+00 -2.15497012e+04  9.24e-06 9.18e-06  1.44e+03     0s
+   4   2.87974431e+00 -4.20696432e+01  1.00e-08 9.98e-09  3.00e+00     0s
+   5   4.66696106e-02 -5.00391462e+00  1.03e-14 1.02e-14  3.37e-01     0s
+   6  -1.15738202e+00 -1.67787731e+00  4.44e-16 0.00e+00  3.47e-02     0s
+   7  -1.38199696e+00 -1.41941199e+00  0.00e+00 1.11e-16  2.49e-03     0s
+   8  -1.41344902e+00 -1.41425443e+00  0.00e+00 2.22e-16  5.37e-05     0s
+   9  -1.41421280e+00 -1.41421360e+00  0.00e+00 2.22e-16  5.36e-08     0s
+  10  -1.41421356e+00 -1.41421356e+00  0.00e+00 2.22e-16  5.36e-11     0s
+
+Barrier solved model in 10 iterations and 0.05 seconds
+Optimal objective -1.41421356e+00
+
+

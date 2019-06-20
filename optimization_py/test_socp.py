@@ -26,3 +26,5 @@ mod.set_objective( sense="max", expr=x+y,)
 
 mod.solve()
 mod.report()
+
+p = mod.add_sos2([x,y,z])
