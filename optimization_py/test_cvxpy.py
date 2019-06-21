@@ -17,5 +17,3 @@ obj = x+y
 
 mod = cp.Problem( cp.Maximize(obj), const )
 mod.solve(solver="CVXOPT", verbose=True) 
-  
-
