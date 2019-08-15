@@ -10,5 +10,5 @@ mod.addCons( v == 100*(x2-x1**2)**2 + (1-x1)**2 )
 
 mod.setObjective(v)
 
-
+print(x1)
 mod.optimize()
