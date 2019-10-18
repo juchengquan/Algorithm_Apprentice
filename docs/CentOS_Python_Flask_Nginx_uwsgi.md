@@ -44,6 +44,8 @@ export PATH=$PATH:/home/user_name/software/python3.7/bin
 
 下面，创建Python3的软连接。
 
+由于```yum```使用Python2，因此需要修改配置文件使其正常工作。
+
 首先复制原Python2.7的目录：
 ```sh
 cd /usr/bin/
@@ -55,8 +57,6 @@ mv python python.bak
 ln -s /usr/local/python3.7/bin/python3.7 /usr/bin/python
 ```
 
-由于```yum```使用Python2，因此需要修改配置文件使其正常工作。
-  
 打开```yum```的配置文件：
 
 ```sh
@@ -273,6 +273,12 @@ threads = 2
 stats = 127.0.0.1:9191
 ```
 注意端口号须与配置的nginx服务端口号一致(端口号：50819)
+
+将文件复制到新文件夹：
+```
+mv flask_test.py en_opt/flask_text.py
+```
+
 
 **注意**：禁用之前设置的```flask_api.conf```:
 ```
