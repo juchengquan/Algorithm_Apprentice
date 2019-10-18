@@ -1,6 +1,6 @@
 from ortools.linear_solver import pywraplp
 import numpy as np
-
+import pandas as pd
 
 solver = pywraplp.Solver('simple_lp_program', pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
 
