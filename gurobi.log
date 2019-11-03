@@ -670,3 +670,7 @@ Solution count 4: 1.42131e+07 1.42182e+07 1.42197e+07 1.42224e+07
 
 Optimal solution found (tolerance 1.00e-04)
 Best objective 1.421308206390e+07, best bound 1.421308206390e+07, gap 0.0000%
+
+Gurobi 8.1.1 (win64, Python) logging started 08/31/19 13:14:39
+
+Academic license - for non-commercial use only
