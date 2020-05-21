@@ -87,48 +87,33 @@ def cocktail_Shaker_Sort(arr):
             break
     return arr
 
-# quick sort
+
+# quick sort recursive
 def quick_sort(arr):
-    check_Input_Type(arr)
-
-    pass
-
-
-def partition(arr):
-    N = arr.shape[0]
-    i = 1
-    j = N-1
-    pivot = arr[0]
-    while True:
-        if i >= N-1 or j <= 1:
-            break
-        if i >= j:
-            break
-        if arr[i] > pivot or arr[j] < pivot:
-            arr[i], arr[j] = arr[j], arr[i]
-
-        if arr[i] <= pivot:  # first add i
-            i = i + 1
-        else:
-            pass
-        if arr[j] >= pivot:
-            j = j - 1
-        else:
-            pass
-    # put pivot into right place:
-    value = arr[0]
-    arr = np.delete(arr, 0, axis=0)
-    arr = np.insert(arr, i-1, value, axis=0)
+    if len(arr) <= 1:
+        return arr
+    N = len(arr)
+    
+    pp = 0
+    idx = 1
+    while idx < N:
+        if arr[idx] < arr[0]:
+            pp += 1
+            arr[idx], arr[pp] = arr[pp], arr[idx] 
+        idx += 1
+    # put pivot in righ place:
+    arr[0], arr[pp] = arr[pp], arr[0]
 
     # TODO
-    arr[0:i-1] = bubble_Sort(arr[0:i-1])
-    arr[i:] = bubble_Sort(arr[i:])
+    arr[0:pp] = quick_sort(arr[0:pp])
+    arr[pp+1:] = quick_sort(arr[pp+1:])
 
     return arr
 
 
 if __name__ == "__main__":
-    arr = generateRandomArray(8)
+    # arr = generateRandomArray(8)
+    arr = [5, 4, 3, 2, 1, 8, 7, 6]
     t_start = timeit.timeit()
     # arr = bubble_Sort(arr)
     
@@ -142,8 +127,6 @@ if __name__ == "__main__":
     t_end= timeit.timeit()
     
     print(t_end - t_start)
-
-
     print(arr)
     
 
